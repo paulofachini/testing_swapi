@@ -35,3 +35,40 @@ asdf global ruby 2.6.3
 asdf local ruby 2.6.3
 
 ```
+
+## Criando o projeto
+
+Préviamente crie o repositório no Github.
+
+```bash
+mkdir workspace
+git clone git@github.com:paulofachini/testing_swapi.git
+cd testing_swapi
+bundle init
+```
+
+O arquivo Gemfile será criado no diretório do projeto.
+Devemos colocar as gems que iremos usar, conforme abaixo:
+
+```ruby
+source "https://rubygems.org"
+
+gem 'rspec', '3.4'
+gem 'httparty', '0.17.0'
+```
+
+Execute o commando:
+```bash
+bundle install
+```
+
+Após a instalação das gems, execute "rspec --help" para validar a instalação.
+Se for necessário execute a instalação:
+```bash
+sudo apt install ruby-rspec-core
+```
+
+Agora execute o comando para iniciar um projeto com RSpec:
+```bash
+rspec --init
+```
