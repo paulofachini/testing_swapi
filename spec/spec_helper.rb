@@ -1,6 +1,7 @@
 require "awesome_print"
 require "json_matchers/rspec"
 require 'httparty'
+require 'rspec/retry'
 
 JsonMatchers.schema_root = "spec/schemas"
 

@@ -39,16 +39,16 @@ describe 'The Star Wars API - SWAPI', :swapi do
       expect(result.parsed_response["release_date"]).to eql "1977-05-25"
     end
 
-    it 'get film by title' do
-      result = SwapiFilms.get_film_by_title("Force")
+    it 'get film by title', :test do
+      result = SwapiFilms.get_film_by_title("force")
       
       expect(result.response.code).to eql "200"
       expect(result.response.message).to eql "OK"
-      expect(result.parsed_response["title"]).to eql "The Force Awakens"
-      expect(result.parsed_response["episode_id"]).to eql 7
-      expect(result.parsed_response["director"]).to eql "J. J. Abrams"
-      expect(result.parsed_response["producer"]).to eql "Kathleen Kennedy, J. J. Abrams, Bryan Burk"
-      expect(result.parsed_response["release_date"]).to eql "2015-12-11"
+      expect(result.parsed_response["results"][0]["title"]).to eql "The Force Awakens"
+      expect(result.parsed_response["results"][0]["episode_id"]).to eql 7
+      expect(result.parsed_response["results"][0]["director"]).to eql "J. J. Abrams"
+      expect(result.parsed_response["results"][0]["producer"]).to eql "Kathleen Kennedy, J. J. Abrams, Bryan Burk"
+      expect(result.parsed_response["results"][0]["release_date"]).to eql "2015-12-11"
     end
 
     it 'get list of all films' do
