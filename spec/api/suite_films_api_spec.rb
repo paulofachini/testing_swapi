@@ -27,6 +27,7 @@ describe 'The Star Wars API - SWAPI', :swapi do
     
   context 'functional tests', :functional do
 
+    
     it 'get film by id' do
       result = SwapiFilms.get_film_by_id("1")
       
