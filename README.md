@@ -58,17 +58,20 @@ gem 'httparty', '0.17.0'
 ```
 
 Execute o commando:
+
 ```bash
 bundle install
 ```
 
 Após a instalação das gems, execute "rspec --help" para validar a instalação.
 Se for necessário execute a instalação:
+
 ```bash
 sudo apt install ruby-rspec-core
 ```
 
 Agora execute o comando para iniciar um projeto com RSpec:
+
 ```bash
 rspec --init
 ```
