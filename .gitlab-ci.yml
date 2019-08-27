@@ -1,0 +1,22 @@
+stages:
+  - health_check
+  - contract
+  - functional
+
+health_check:
+  stage: health_check
+  script:
+  - bundle install
+  - bundle exec rspec -t health_check
+
+contract:
+  stage: contract 
+  script:
+  - bundle install
+  - bundle exec rspec -t contract
+
+functional:
+  stage: functional
+  script:
+  - bundle install
+  - bundle exec rspec -t functional
