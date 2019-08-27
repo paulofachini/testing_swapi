@@ -9,6 +9,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2019.0331)
     multi_xml (0.6.0)
+    pp (0.1.1)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -28,6 +29,7 @@ PLATFORMS
 
 DEPENDENCIES
   httparty (= 0.17.0)
+  pp
   rspec (= 3.4)
 
 BUNDLED WITH
