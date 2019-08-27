@@ -75,3 +75,7 @@ Agora execute o comando para iniciar um projeto com RSpec:
 ```bash
 rspec --init
 ```
+
+## CI/CD
+
+Implementado no Gitlab.
