@@ -1,4 +1,4 @@
-require_relative 'lib/swapi_api.rb'
+require_relative '../lib/swapi_films.rb'
 
 describe 'The Star Wars API - SWAPI', :swapi do
 
