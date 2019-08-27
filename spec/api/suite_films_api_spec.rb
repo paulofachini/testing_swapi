@@ -39,7 +39,7 @@ describe 'The Star Wars API - SWAPI', :swapi do
       expect(result.parsed_response["release_date"]).to eql "1977-05-25"
     end
 
-    it 'get film by title', :test do
+    it 'get film by title' do
       result = SwapiFilms.get_film_by_title("force")
       
       expect(result.response.code).to eql "200"
@@ -57,6 +57,14 @@ describe 'The Star Wars API - SWAPI', :swapi do
       expect(result.response.code).to eql "200"
       expect(result.response.message).to eql "OK"
       expect(result.parsed_response["count"]).to eql 7
+    end
+
+    it 'verify invalid film title' do
+      result = SwapiFilms.get_film_by_title("star trek")
+      
+      expect(result.response.code).to eql "200"
+      expect(result.response.message).to eql "OK"
+      expect(result.parsed_response["count"]).to eql 0
     end
 
   end
