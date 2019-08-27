@@ -1,16 +1,14 @@
-describe('Testing SWAPI', :swapi) do
-    
-    context('functional tests') do
+describe('The Star Wars API - SWAPI', :swapi) do
+  
+  describe('get film resources') do
+    context('when request all the films') do
+      # let(:result) { Swapi.get_all_films }
 
-        it('should return all the films') do
-        end
+      puts Swapi.get_all_films
 
-        it('should return a specific film') do
-        end
-
-        it('should return a filtered film result') do
-        end
-
-     end
+      # it { expect(result.response.code).to eql "200" }
+    end
+  
+  end
 
 end
