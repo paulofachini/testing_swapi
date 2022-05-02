@@ -41,6 +41,18 @@ describe 'The Star Wars API - SWAPI', :swapi do
     end
 
     it 'get film by title' do
+      result = SwapiFilms.get_film_by_title("hope")
+      
+      expect(result.response.code).to eql "200"
+      expect(result.response.message).to eql "OK"
+      expect(result.parsed_response["results"][0]["title"]).to eql "A New Hope"
+      expect(result.parsed_response["results"][0]["episode_id"]).to eql 4
+      expect(result.parsed_response["results"][0]["director"]).to eql "George Lucas"
+      expect(result.parsed_response["results"][0]["producer"]).to eql "Gary Kurtz, Rick McCallum"
+      expect(result.parsed_response["results"][0]["release_date"]).to eql "1977-05-25"
+    end
+
+    xit 'get film by title' do
       result = SwapiFilms.get_film_by_title("force")
       
       expect(result.response.code).to eql "200"
@@ -57,7 +69,7 @@ describe 'The Star Wars API - SWAPI', :swapi do
       
       expect(result.response.code).to eql "200"
       expect(result.response.message).to eql "OK"
-      expect(result.parsed_response["count"]).to eql 7
+      expect(result.parsed_response["count"]).to eql 6
     end
 
     it 'verify invalid film title' do

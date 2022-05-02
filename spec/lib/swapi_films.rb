@@ -1,6 +1,6 @@
 class SwapiFilms
   include HTTParty
-  base_uri "https://swapi.co/api"
+  base_uri "https://swapi.dev/api/"
 
   def self.get_api_root
     get("/")
